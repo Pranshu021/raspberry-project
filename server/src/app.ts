@@ -9,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+
 app.use((req: Request, res: Response, next: NextFunction) => {
     try {
         console.log(`[+] Request recieved from ${req.ip} ${req.path}`)
@@ -20,8 +22,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 })
 
 app.use('/api/', routes);
-
-
 
 
 export default app
